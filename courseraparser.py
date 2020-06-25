@@ -38,14 +38,14 @@ class Parser:
             page_data = []
             for key in _parser.selectors.keys():
                 content = soup.select(_parser.selectors[key])
-                page_data.append(list(map(lambda x: x.text, content)))
+                page_data.append([el.text for el in content])
             page_data.append(get_links(_soup))
             sleep(1)
             return list(zip(*page_data))
 
         def get_links(_soup):
-            results = _soup.find_all('a', class_="rc-DesktopSearchCard anchor-wrapper")
-            return list(map(lambda tag: tag.get('href'), results))
+            content = _soup.find_all('a', class_="rc-DesktopSearchCard anchor-wrapper")
+            return [tag.get('href') for tag in content]
 
         soup = get_page_soup(self, page)
         print(f'Page {page} parsed...')
@@ -55,7 +55,7 @@ class Parser:
         number_of_pages = self.get_number_of_pages()
         number_of_pages = int(min(threshold, number_of_pages))
         pages = range(1, number_of_pages+1)
-        data = list(map(self.parse_page, pages))
+        data = [self.parse_page(page) for page in pages]
         data = list(reduce(lambda prev, cur: prev + cur, data))
         data = pd.DataFrame(data, columns=self.columns)
         data.to_csv('coursera.csv', index=False)
