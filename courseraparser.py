@@ -6,7 +6,7 @@ from functools import reduce
 import pandas as pd
 
 
-class Parser:
+class CatalogueParser:
     def __init__(self):
         self.initial_url = 'https://www.coursera.org/courses'
         self.exceptions = ['explanation-table']
@@ -27,29 +27,9 @@ class Parser:
         return int(soup.select('.box.number')[-1].text)
 
     def parse_page(self, page):
-        def get_page_soup(_parser, _page):
-            url = f'{_parser.initial_url}?page={_page}&index=prod_all_products_term_optimization'
-            r = requests.get(url)
-            _soup = BeautifulSoup(r.content, features='html.parser')
-            _soup.find('div', class_=_parser.exceptions).decompose()
-            return _soup
-
-        def get_page_data(_parser, _soup):
-            page_data = []
-            for key in _parser.selectors.keys():
-                content = soup.select(_parser.selectors[key])
-                page_data.append([el.text for el in content])
-            page_data.append(get_links(_soup))
-            sleep(1)
-            return list(zip(*page_data))
-
-        def get_links(_soup):
-            content = _soup.find_all('a', class_="rc-DesktopSearchCard anchor-wrapper")
-            return [tag.get('href') for tag in content]
-
-        soup = get_page_soup(self, page)
+        soup = self._get_page_soup(page)
         print(f'Page {page} parsed...')
-        return get_page_data(self, soup)
+        return self._get_page_data(soup)
 
     def parse(self, threshold=np.inf):
         number_of_pages = self.get_number_of_pages()
@@ -61,6 +41,27 @@ class Parser:
         data.to_csv('coursera.csv', index=False)
         print('Parsing finished.')
 
+    def _get_page_soup(self, page):
+        url = f'{self.initial_url}?page={page}&index=prod_all_products_term_optimization'
+        r = requests.get(url)
+        _soup = BeautifulSoup(r.content, features='html.parser')
+        _soup.find('div', class_=self.exceptions).decompose()
+        return _soup
 
-parser = Parser()
-parser.parse(3)
+    def _get_page_data(self, soup):
+        page_data = []
+        for key in self.selectors.keys():
+            content = soup.select(self.selectors[key])
+            page_data.append([el.text for el in content])
+        page_data.append(self._get_links(soup))
+        sleep(1)
+        return list(zip(*page_data))
+
+    @staticmethod
+    def _get_links(soup):
+        content = soup.find_all('a', class_="rc-DesktopSearchCard anchor-wrapper")
+        return [tag.get('href') for tag in content]
+
+
+my_parser = CatalogueParser()
+my_parser.parse(3)
