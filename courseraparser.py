@@ -102,6 +102,7 @@ class ReviewParser:
         for star in range(1, 6):
             soup = self.get_soup(path, tail=f'/reviews?sort=helpful&star={star}')
             number_of_pages = self.get_number_of_review_pages(soup)
+            print(f'Star:{star} Number of Pages:{number_of_pages}')
 
             content[star] = []
 
@@ -114,6 +115,7 @@ class ReviewParser:
                 texts = soup.select('.rc-CML.font-lg.styled')
                 texts = [tag.text for tag in texts]
                 content[star].extend(zip(texts, thumbs_up))
+                print('Items collected:', len(content[star]))
 
         return content
 
@@ -132,5 +134,5 @@ class ReviewParser:
 
 
 my_parser = ReviewParser()
-my_path = '/learn/machine-learning'
+my_path = '/learn/indigenous-canada'
 print(my_parser.get_reviews(my_path))
