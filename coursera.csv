@@ -1,31 +1,31 @@
-name,type,source,rating,ratings,students,level,link
-IBM Data Science,PROFESSIONAL CERTIFICATE,IBM,4.6,"(54,499)",530k,Beginner,/professional-certificates/ibm-data-science
-Python for Everybody,SPECIALIZATION,University of Michigan,4.8,"(147,688)",1.6m,Beginner,/specializations/python
-Introduction to Data Science,SPECIALIZATION,IBM,4.6,"(42,269)",340k,Beginner,/specializations/introduction-data-science
-Google IT Support,PROFESSIONAL CERTIFICATE,Google,4.8,"(42,333)",400k,Beginner,/professional-certificates/google-it-support
-Deep Learning,SPECIALIZATION,deeplearning.ai,4.8,"(96,324)",750k,Intermediate,/specializations/deep-learning
-The Science of Well-Being,COURSE,Yale University,4.9,"(14,376)",2.7m,Mixed,/learn/the-science-of-well-being
-Machine Learning,COURSE,Stanford University,4.9,"(139,371)",3.3m,Mixed,/learn/machine-learning
-Key Technologies for Business,SPECIALIZATION,IBM,4.7,"(38,549)",330k,Beginner,/specializations/key-technologies-for-business
-IBM AI Foundations for Business,SPECIALIZATION,IBM,4.7,"(38,434)",320k,Beginner,/specializations/ibm-ai-foundations-for-business
-Applied Data Science,SPECIALIZATION,IBM,4.6,"(22,425)",240k,Beginner,/specializations/applied-data-science
-Business Foundations,SPECIALIZATION,University of Pennsylvania,4.7,"(17,023)",530k,Beginner,/specializations/wharton-business-foundations
-Data Science,SPECIALIZATION,Johns Hopkins University,4.5,"(38,193)",870k,Beginner,/specializations/jhu-data-science
-Cloud Architecture with Google Cloud,PROFESSIONAL CERTIFICATE,Google Cloud,4.7,"(36,819)",340k,Intermediate,/professional-certificates/gcp-cloud-architect
-Cloud Engineering with Google Cloud,PROFESSIONAL CERTIFICATE,Google Cloud,4.7,"(36,400)",340k,Intermediate,/professional-certificates/cloud-engineering-gcp
-Excel Skills for Business,SPECIALIZATION,Macquarie University,4.8,"(19,005)",300k,Beginner,/specializations/excel
-Architecting with Google Compute Engine,SPECIALIZATION,Google Cloud,4.7,"(36,648)",330k,Intermediate,/specializations/gcp-architecture
-Data Science: Foundations using R,SPECIALIZATION,Johns Hopkins University,4.6,"(36,125)",780k,Beginner,/specializations/data-science-foundations-r
-IBM Applied AI,PROFESSIONAL CERTIFICATE,IBM,4.6,"(20,674)",250k,Beginner,/professional-certificates/applied-artifical-intelligence-ibm-watson-ai
-Finance & Quantitative Modeling for Analysts,SPECIALIZATION,University of Pennsylvania,4.5,"(10,838)",270k,Beginner,/specializations/finance-quantitative-modeling-analysts
-Financial Markets,COURSE,Yale University,4.8,"(8,772)",540k,Beginner,/learn/financial-markets-global
-Indigenous Canada,COURSE,University of Alberta,4.8,"(1,813)",67k,Mixed,/learn/indigenous-canada
-Data Engineering with Google Cloud,PROFESSIONAL CERTIFICATE,Google Cloud,4.6,"(11,746)",130k,Intermediate,/professional-certificates/gcp-data-engineering
-"Data Engineering, Big Data, and Machine Learning on GCP",SPECIALIZATION,Google Cloud,4.6,"(11,596)",130k,Intermediate,/specializations/gcp-data-machine-learning
-Business Analytics,SPECIALIZATION,University of Pennsylvania,4.6,"(13,015)",290k,Beginner,/specializations/business-analytics
-TensorFlow in Practice,SPECIALIZATION,deeplearning.ai,4.7,"(11,597)",180k,Intermediate,/specializations/tensorflow-in-practice
-Business and Financial Modeling,SPECIALIZATION,University of Pennsylvania,4.5,"(7,305)",170k,Beginner,/specializations/wharton-business-financial-modeling
-Graphic Design,SPECIALIZATION,California Institute of the Arts,4.7,"(10,262)",370k,Beginner,/specializations/graphic-design
-Google IT Automation with Python,PROFESSIONAL CERTIFICATE,Google,4.7,"(7,447)",130k,Beginner,/professional-certificates/google-it-automation
-Applied Data Science with Python,SPECIALIZATION,University of Michigan,4.5,"(22,290)",520k,Intermediate,/specializations/data-science-python
-Architecting with Google Kubernetes Engine,SPECIALIZATION,Google Cloud,4.7,"(31,393)",320k,Beginner,/specializations/architecting-google-kubernetes-engine
+name,type,source,rating,ratings,students,level,path
+IBM Data Science,PROFESSIONAL CERTIFICATE,IBM,4.6,"(54,757)",530k,Beginner,/professional-certificates/ibm-data-science
+Python for Everybody,SPECIALIZATION,University of Michigan,4.8,"(149,050)",1.6m,Beginner,/specializations/python
+Introduction to Data Science,SPECIALIZATION,IBM,4.6,"(42,452)",340k,Beginner,/specializations/introduction-data-science
+Google IT Support,PROFESSIONAL CERTIFICATE,Google,4.8,"(42,737)",410k,Beginner,/professional-certificates/google-it-support
+Deep Learning,SPECIALIZATION,deeplearning.ai,4.8,"(96,675)",750k,Intermediate,/specializations/deep-learning
+The Science of Well-Being,COURSE,Yale University,4.9,"(14,671)",2.7m,Mixed,/learn/the-science-of-well-being
+Machine Learning,COURSE,Stanford University,4.9,"(139,558)",3.3m,Mixed,/learn/machine-learning
+Key Technologies for Business,SPECIALIZATION,IBM,4.7,"(38,712)",330k,Beginner,/specializations/key-technologies-for-business
+IBM AI Foundations for Business,SPECIALIZATION,IBM,4.7,"(38,593)",320k,Beginner,/specializations/ibm-ai-foundations-for-business
+Applied Data Science,SPECIALIZATION,IBM,4.6,"(22,520)",250k,Beginner,/specializations/applied-data-science
+Business Foundations,SPECIALIZATION,University of Pennsylvania,4.7,"(17,065)",530k,Beginner,/specializations/wharton-business-foundations
+Data Science,SPECIALIZATION,Johns Hopkins University,4.5,"(38,312)",870k,Beginner,/specializations/jhu-data-science
+Excel Skills for Business,SPECIALIZATION,Macquarie University,4.8,"(19,295)",300k,Beginner,/specializations/excel
+IBM Applied AI,PROFESSIONAL CERTIFICATE,IBM,4.6,"(20,754)",250k,Beginner,/professional-certificates/applied-artifical-intelligence-ibm-watson-ai
+Data Science: Foundations using R,SPECIALIZATION,Johns Hopkins University,4.6,"(36,240)",780k,Beginner,/specializations/data-science-foundations-r
+Cloud Architecture with Google Cloud,PROFESSIONAL CERTIFICATE,Google Cloud,4.7,"(36,904)",340k,Intermediate,/professional-certificates/gcp-cloud-architect
+Cloud Engineering with Google Cloud,PROFESSIONAL CERTIFICATE,Google Cloud,4.7,"(36,482)",340k,Intermediate,/professional-certificates/cloud-engineering-gcp
+Indigenous Canada,COURSE,University of Alberta,4.8,"(1,826)",69k,Mixed,/learn/indigenous-canada
+Architecting with Google Compute Engine,SPECIALIZATION,Google Cloud,4.7,"(36,732)",340k,Intermediate,/specializations/gcp-architecture
+Financial Markets,COURSE,Yale University,4.8,"(8,875)",550k,Beginner,/learn/financial-markets-global
+Finance & Quantitative Modeling for Analysts,SPECIALIZATION,University of Pennsylvania,4.5,"(10,874)",270k,Beginner,/specializations/finance-quantitative-modeling-analysts
+TensorFlow in Practice,SPECIALIZATION,deeplearning.ai,4.7,"(11,691)",190k,Intermediate,/specializations/tensorflow-in-practice
+Data Engineering with Google Cloud,PROFESSIONAL CERTIFICATE,Google Cloud,4.6,"(11,779)",140k,Intermediate,/professional-certificates/gcp-data-engineering
+Business Analytics,SPECIALIZATION,University of Pennsylvania,4.6,"(13,048)",290k,Beginner,/specializations/business-analytics
+Business and Financial Modeling,SPECIALIZATION,University of Pennsylvania,4.5,"(7,333)",170k,Beginner,/specializations/wharton-business-financial-modeling
+Graphic Design,SPECIALIZATION,California Institute of the Arts,4.7,"(10,333)",370k,Beginner,/specializations/graphic-design
+"Data Engineering, Big Data, and Machine Learning on GCP",SPECIALIZATION,Google Cloud,4.6,"(11,627)",130k,Intermediate,/specializations/gcp-data-machine-learning
+Google IT Automation with Python,PROFESSIONAL CERTIFICATE,Google,4.7,"(7,595)",130k,Beginner,/professional-certificates/google-it-automation
+Applied Data Science with Python,SPECIALIZATION,University of Michigan,4.5,"(22,412)",520k,Intermediate,/specializations/data-science-python
+Digital Marketing,SPECIALIZATION,University of Illinois at Urbana-Champaign,4.6,"(11,774)",410k,Beginner,/specializations/digital-marketing
