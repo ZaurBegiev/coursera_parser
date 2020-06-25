@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd
 from functools import reduce
-from time import sleep
 
 
 class CatalogueParser:
@@ -42,6 +41,7 @@ class CatalogueParser:
 
     def _get_page_soup(self, page):
         url = f'{self.initial_url}?page={page}&index=prod_all_products_term_optimization'
+        print(f'Requested:{url}')
         r = requests.get(url)
         _soup = BeautifulSoup(r.content, features='html.parser')
         _soup.find('div', class_=self.exceptions).decompose()
@@ -53,7 +53,6 @@ class CatalogueParser:
             content = soup.select(self.selectors[key])
             page_data.append([el.text for el in content])
         page_data.append(self.get_paths(soup))
-        sleep(1)
         return list(zip(*page_data))
 
     @staticmethod
@@ -70,10 +69,10 @@ class ReviewParser:
     def __init__(self):
         self.home = 'https://www.coursera.org'
 
-    def get_soup(self, path, add=''):
-        url = f'{self.home}{path}{add}'
+    def get_soup(self, path, tail=''):
+        url = f'{self.home}{path}{tail}'
+        print(f'Requested:{url}')
         r = requests.get(url)
-        sleep(1)
         soup = BeautifulSoup(r.content, features='html.parser')
         return soup
 
@@ -100,17 +99,17 @@ class ReviewParser:
     def get_reviews(self, path):
         content = {}
 
-        for star in range(1, 2):            
-            soup = self.get_soup(path, add=f'/reviews?sort=helpful&star={star}')
+        for star in range(1, 6):
+            soup = self.get_soup(path, tail=f'/reviews?sort=helpful&star={star}')
             number_of_pages = self.get_number_of_review_pages(soup)
 
             content[star] = []
 
             for page in range(1, number_of_pages + 1):
-                url = f'{self.home}{path}/reviews?sort=helpful&star={star}'
+                tail = f'/reviews?sort=helpful&star={star}'
                 if page > 1:
-                    url += f'&page={page}'
-                soup = self.get_soup(url)
+                    tail += f'&page={page}'
+                    soup = self.get_soup(path, tail=tail)
                 thumbs_up = self.get_review_thumbs_up(soup)
                 texts = soup.select('.rc-CML.font-lg.styled')
                 texts = [tag.text for tag in texts]
@@ -133,5 +132,5 @@ class ReviewParser:
 
 
 my_parser = ReviewParser()
-my_path = '/learn/the-science-of-well-being'
+my_path = '/learn/machine-learning'
 print(my_parser.get_reviews(my_path))
